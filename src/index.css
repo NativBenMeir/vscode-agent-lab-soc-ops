@@ -6,6 +6,20 @@
   --color-marked: #dcfce7;
   --color-marked-border: #22c55e;
   --color-bingo: #fbbf24;
+  --color-coffee-dark: #3e2723;
+  --color-coffee-medium: #6d4c41;
+  --color-coffee-light: #a1887f;
+  --color-cream: #faf3e0;
+  --color-espresso: #1a0f0a;
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-body: "Quicksand", "Trebuchet MS", sans-serif;
+}
+
+/* CSS Custom Properties for smooth animations */
+@property --gradient-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }
 
 html,
@@ -16,6 +30,13 @@ body,
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
   -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom cursor for desktop */
+@media (pointer: fine) {
+  body {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><text y="20" font-size="20">☕</text></svg>') 12 12, auto;
+  }
 }
