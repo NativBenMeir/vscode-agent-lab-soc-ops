@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Crimson+Pro:wght@400;600;700&display=swap');
 
 @theme {
   --color-accent: #2563eb;
@@ -6,6 +7,17 @@
   --color-marked: #dcfce7;
   --color-marked-border: #22c55e;
   --color-bingo: #fbbf24;
+  
+  /* Coffee shop color palette */
+  --color-coffee-dark: #3e2723;
+  --color-coffee-medium: #5d4037;
+  --color-coffee-light: #8d6e63;
+  --color-cream: #f5f5dc;
+  --color-coffee-bg: #faf8f3;
+  
+  /* Typography */
+  --font-display: 'Crimson Pro', serif;
+  --font-handwritten: 'Caveat', cursive;
 }
 
 html,
@@ -18,4 +30,49 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, sans-serif;
   -webkit-tap-highlight-color: transparent;
+}
+
+/* CSS Animations - respect prefers-reduced-motion */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fadeInSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
