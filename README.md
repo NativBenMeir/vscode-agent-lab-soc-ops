@@ -11,7 +11,7 @@
 [![Built with React](https://img.shields.io/badge/Built_with-React_19-61DAFB?logo=react)](https://react.dev)
 [![Tailwind CSS v4](https://img.shields.io/badge/Styled_with-Tailwind_v4-38bdf8?logo=tailwindcss)](https://tailwindcss.com)
 
-[🎮 Play Demo](#) • [📖 Workshop Guide](.lab/GUIDE.md) • [🎯 Customize](#customize-your-game)
+[🎮 Play Demo](https://nativbenmeir.github.io/vscode-agent-lab-soc-ops/) • [📖 Workshop Guide](.lab/GUIDE.md) • [🎯 Customize](#customize-your-game)
 
 </div>
 
