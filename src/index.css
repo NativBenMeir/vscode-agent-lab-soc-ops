@@ -22,12 +22,6 @@
   inherits: false;
 }
 
-@property --fill-percentage {
-  syntax: '<percentage>';
-  initial-value: 0%;
-  inherits: false;
-}
-
 html,
 body,
 #root {

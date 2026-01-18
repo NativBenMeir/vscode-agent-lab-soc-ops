@@ -4,6 +4,9 @@ interface StartScreenProps {
   onStart: () => void;
 }
 
+// Detect touch devices
+const isTouchDevice = 'ontouchstart' in window;
+
 export function StartScreen({ onStart }: StartScreenProps) {
   const [isCardFlipped, setIsCardFlipped] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -25,7 +28,6 @@ export function StartScreen({ onStart }: StartScreenProps) {
 
   // Cursor following coffee bean (desktop only)
   useEffect(() => {
-    const isTouchDevice = 'ontouchstart' in window;
     if (isTouchDevice) return;
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -38,7 +40,6 @@ export function StartScreen({ onStart }: StartScreenProps) {
 
   // Smooth lerp animation for coffee bean
   useEffect(() => {
-    const isTouchDevice = 'ontouchstart' in window;
     if (isTouchDevice) return;
 
     let animationFrameId: number;
@@ -57,7 +58,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
 
   // 3D card tilt effect
   const handleCardMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current || 'ontouchstart' in window) return;
+    if (!cardRef.current || isTouchDevice) return;
 
     const rect = cardRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -102,7 +103,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
       }}>
       
       {/* Cursor-following coffee bean (desktop only) */}
-      {!('ontouchstart' in window) && (
+      {!isTouchDevice && (
         <div
           className="fixed pointer-events-none z-50 text-2xl transition-opacity duration-300"
           style={{
