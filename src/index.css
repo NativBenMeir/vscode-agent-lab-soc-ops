@@ -1,11 +1,19 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-accent: #2563eb;
-  --color-accent-light: #3b82f6;
-  --color-marked: #dcfce7;
-  --color-marked-border: #22c55e;
-  --color-bingo: #fbbf24;
+  --color-coffee-dark: #654321;
+  --color-coffee-medium: #8B4513;
+  --color-coffee-light: #A0522D;
+  --color-latte: #C8A882;
+  --color-paper: #faf8f3;
+  --color-paper-aged: #f5f1e8;
+  --color-accent: #654321;
+  --color-accent-light: #8B4513;
+  --color-marked: #f5deb8;
+  --color-marked-border: #C8A882;
+  --color-bingo: #D4A574;
+  --font-family-handwritten: 'Caveat', cursive;
+  --font-family-casual: 'Patrick Hand', cursive;
 }
 
 html,
@@ -16,6 +24,32 @@ body,
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Patrick Hand', cursive, system-ui, sans-serif;
   -webkit-tap-highlight-color: transparent;
+}
+
+@layer utilities {
+  .coffee-texture {
+    background: 
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139, 69, 19, 0.02) 2px, rgba(139, 69, 19, 0.02) 4px),
+      repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(101, 67, 33, 0.02) 2px, rgba(101, 67, 33, 0.02) 4px),
+      #faf8f3;
+  }
+
+  .coffee-stain {
+    background-image:
+      radial-gradient(ellipse at 20% 30%, rgba(139, 69, 19, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 70%, rgba(101, 67, 33, 0.06) 0%, transparent 40%),
+      radial-gradient(ellipse at 50% 90%, rgba(160, 82, 45, 0.05) 0%, transparent 60%);
+  }
+  
+  .coffee-ring {
+    box-shadow: 
+      inset 0 0 8px rgba(139, 69, 19, 0.1),
+      0 1px 2px rgba(101, 67, 33, 0.05);
+  }
+  
+  .handwritten-title {
+    font-family: var(--font-family-handwritten);
+  }
 }
