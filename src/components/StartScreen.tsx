@@ -23,13 +23,13 @@ export function StartScreen({ onStart }: StartScreenProps) {
         <circle cx="30" cy="30" r="15" fill="none" stroke="#D2691E" strokeWidth="1" opacity="0.4" />
       </svg>
 
-      <svg className="absolute opacity-12" style={{ top: '15%', right: '8%', width: '70px', height: '70px' }}>
+      <svg className="absolute" style={{ top: '15%', right: '8%', width: '70px', height: '70px', opacity: 0.12 }}>
         <circle cx="35" cy="35" r="30" fill="none" stroke="#8B4513" strokeWidth="2.5" />
         <circle cx="35" cy="35" r="24" fill="none" stroke="#D2691E" strokeWidth="1.8" opacity="0.7" />
         <circle cx="35" cy="35" r="18" fill="none" stroke="#F5DEB3" strokeWidth="1.2" opacity="0.5" />
       </svg>
 
-      <svg className="absolute opacity-8" style={{ bottom: '18%', left: '15%', width: '50px', height: '50px' }}>
+      <svg className="absolute" style={{ bottom: '18%', left: '15%', width: '50px', height: '50px', opacity: 0.08 }}>
         <circle cx="25" cy="25" r="22" fill="none" stroke="#6F4E37" strokeWidth="2" />
         <circle cx="25" cy="25" r="17" fill="none" stroke="#8B4513" strokeWidth="1.5" opacity="0.6" />
       </svg>
@@ -46,42 +46,42 @@ export function StartScreen({ onStart }: StartScreenProps) {
       </svg>
 
       {/* Coffee bean decorations - scattered and rotated */}
-      <svg className="absolute opacity-20" style={{ top: '10%', left: '25%', width: '20px', height: '30px', transform: 'rotate(25deg)', animation: 'float-bean 4s ease-in-out infinite', '--rotate-start': '25deg' } as React.CSSProperties}>
+      <svg className="absolute" style={{ top: '10%', left: '25%', width: '20px', height: '30px', transform: 'rotate(25deg)', animation: 'float-bean 4s ease-in-out infinite', '--rotate-start': '25deg', opacity: 0.20 } as React.CSSProperties}>
         <ellipse cx="10" cy="15" rx="8" ry="13" fill="#3E2723"/>
         <path d="M 10 5 Q 10 15 10 25" stroke="#6F4E37" strokeWidth="1.5" fill="none"/>
       </svg>
 
-      <svg className="absolute opacity-15" style={{ top: '35%', right: '12%', width: '18px', height: '28px', transform: 'rotate(-40deg)', animation: 'float-bean 5s ease-in-out infinite 0.5s', '--rotate-start': '-40deg' } as React.CSSProperties}>
+      <svg className="absolute" style={{ top: '35%', right: '12%', width: '18px', height: '28px', transform: 'rotate(-40deg)', animation: 'float-bean 5s ease-in-out infinite 0.5s', '--rotate-start': '-40deg', opacity: 0.15 } as React.CSSProperties}>
         <ellipse cx="9" cy="14" rx="7" ry="12" fill="#3E2723"/>
         <path d="M 9 4 Q 9 14 9 24" stroke="#6F4E37" strokeWidth="1.3" fill="none"/>
       </svg>
 
-      <svg className="absolute opacity-18" style={{ bottom: '12%', left: '8%', width: '22px', height: '32px', transform: 'rotate(60deg)', animation: 'float-bean 4.5s ease-in-out infinite 1s', '--rotate-start': '60deg' } as React.CSSProperties}>
+      <svg className="absolute" style={{ bottom: '12%', left: '8%', width: '22px', height: '32px', transform: 'rotate(60deg)', animation: 'float-bean 4.5s ease-in-out infinite 1s', '--rotate-start': '60deg', opacity: 0.18 } as React.CSSProperties}>
         <ellipse cx="11" cy="16" rx="9" ry="14" fill="#3E2723"/>
         <path d="M 11 4 Q 11 16 11 28" stroke="#6F4E37" strokeWidth="1.6" fill="none"/>
       </svg>
 
-      <svg className="absolute opacity-16" style={{ bottom: '40%', right: '6%', width: '19px', height: '29px', transform: 'rotate(-15deg)', animation: 'float-bean 5.5s ease-in-out infinite 1.5s', '--rotate-start': '-15deg' } as React.CSSProperties}>
+      <svg className="absolute" style={{ bottom: '40%', right: '6%', width: '19px', height: '29px', transform: 'rotate(-15deg)', animation: 'float-bean 5.5s ease-in-out infinite 1.5s', '--rotate-start': '-15deg', opacity: 0.16 } as React.CSSProperties}>
         <ellipse cx="9.5" cy="14.5" rx="7.5" ry="12.5" fill="#3E2723"/>
         <path d="M 9.5 4 Q 9.5 14.5 9.5 25" stroke="#6F4E37" strokeWidth="1.4" fill="none"/>
       </svg>
 
-      <svg className="absolute opacity-14" style={{ top: '45%', left: '18%', width: '21px', height: '31px', transform: 'rotate(80deg)', animation: 'float-bean 4.8s ease-in-out infinite 2s', '--rotate-start': '80deg' } as React.CSSProperties}>
+      <svg className="absolute" style={{ top: '45%', left: '18%', width: '21px', height: '31px', transform: 'rotate(80deg)', animation: 'float-bean 4.8s ease-in-out infinite 2s', '--rotate-start': '80deg', opacity: 0.14 } as React.CSSProperties}>
         <ellipse cx="10.5" cy="15.5" rx="8.5" ry="13.5" fill="#3E2723"/>
         <path d="M 10.5 4 Q 10.5 15.5 10.5 27" stroke="#6F4E37" strokeWidth="1.5" fill="none"/>
       </svg>
 
-      <svg className="absolute opacity-17" style={{ top: '70%', right: '22%', width: '20px', height: '30px', transform: 'rotate(-55deg)', animation: 'float-bean 5.2s ease-in-out infinite 2.5s', '--rotate-start': '-55deg' } as React.CSSProperties}>
+      <svg className="absolute" style={{ top: '70%', right: '22%', width: '20px', height: '30px', transform: 'rotate(-55deg)', animation: 'float-bean 5.2s ease-in-out infinite 2.5s', '--rotate-start': '-55deg', opacity: 0.17 } as React.CSSProperties}>
         <ellipse cx="10" cy="15" rx="8" ry="13" fill="#3E2723"/>
         <path d="M 10 5 Q 10 15 10 25" stroke="#6F4E37" strokeWidth="1.5" fill="none"/>
       </svg>
 
-      <svg className="absolute opacity-19" style={{ bottom: '55%', left: '30%', width: '23px', height: '33px', transform: 'rotate(10deg)', animation: 'float-bean 4.3s ease-in-out infinite 3s', '--rotate-start': '10deg' } as React.CSSProperties}>
+      <svg className="absolute" style={{ bottom: '55%', left: '30%', width: '23px', height: '33px', transform: 'rotate(10deg)', animation: 'float-bean 4.3s ease-in-out infinite 3s', '--rotate-start': '10deg', opacity: 0.19 } as React.CSSProperties}>
         <ellipse cx="11.5" cy="16.5" rx="9.5" ry="14.5" fill="#3E2723"/>
         <path d="M 11.5 4 Q 11.5 16.5 11.5 29" stroke="#6F4E37" strokeWidth="1.7" fill="none"/>
       </svg>
 
-      <svg className="absolute opacity-13" style={{ top: '22%', right: '28%', width: '17px', height: '27px', transform: 'rotate(-70deg)', animation: 'float-bean 5.8s ease-in-out infinite 3.5s', '--rotate-start': '-70deg' } as React.CSSProperties}>
+      <svg className="absolute" style={{ top: '22%', right: '28%', width: '17px', height: '27px', transform: 'rotate(-70deg)', animation: 'float-bean 5.8s ease-in-out infinite 3.5s', '--rotate-start': '-70deg', opacity: 0.13 } as React.CSSProperties}>
         <ellipse cx="8.5" cy="13.5" rx="6.5" ry="11.5" fill="#3E2723"/>
         <path d="M 8.5 4 Q 8.5 13.5 8.5 23" stroke="#6F4E37" strokeWidth="1.2" fill="none"/>
       </svg>
