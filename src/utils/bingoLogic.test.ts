@@ -42,9 +42,8 @@ describe('bingoLogic', () => {
 
     it('should randomize question order between boards', () => {
       // Mock Math.random to make it deterministic for first call
-      const originalRandom = Math.random;
       let callCount = 0;
-      vi.spyOn(Math, 'random').mockImplementation(() => {
+      const randomSpy = vi.spyOn(Math, 'random').mockImplementation(() => {
         callCount++;
         return callCount / 100;
       });
@@ -55,7 +54,7 @@ describe('bingoLogic', () => {
       callCount = 0;
       const board2 = generateBoard();
 
-      Math.random = originalRandom;
+      randomSpy.mockRestore();
 
       // Boards should have different order (very unlikely to be the same with randomization)
       const texts1 = board1.filter((s) => !s.isFreeSpace).map((s) => s.text);
