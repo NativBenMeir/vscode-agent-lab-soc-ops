@@ -154,4 +154,11 @@ body {
       opacity: 1;
     }
   }
+  
+  @keyframes fade-in-stagger {
+    from, to {
+      transform: none;
+      opacity: 1;
+    }
+  }
 }
